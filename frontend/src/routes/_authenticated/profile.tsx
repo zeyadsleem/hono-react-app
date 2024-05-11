@@ -19,13 +19,13 @@ function Profile() {
     <div className="p-2">
       <div className="flex items-center gap-2">
         <Avatar>
-          {data.picture && (
-            <AvatarImage src={data.picture} alt={data.given_name} />
+          {data.user.picture && (
+            <AvatarImage src={data.user.picture} alt={data.user.given_name} />
           )}
-          <AvatarFallback>{data.given_name}</AvatarFallback>
+          <AvatarFallback>{data.user.given_name}</AvatarFallback>
         </Avatar>
         <p>
-          {data.given_name} {data.family_name}
+          {data.user.given_name} {data.user.family_name}
         </p>
       </div>
       <Button asChild className="my-4">
